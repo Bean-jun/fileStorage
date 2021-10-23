@@ -65,7 +65,7 @@ async def download_file(filename: str, db: Session = Depends(get_db)):
         return {"msg": "fail", "code": status.HTTP_404_NOT_FOUND}
 
 
-@route.put("/delete/{filename}")
+@route.delete("/delete/{filename}")
 async def delete_file(filename: str, db: Session = Depends(get_db)):
     instance = crud.get_item(db, filename)
     if instance and instance.is_delete is False:
