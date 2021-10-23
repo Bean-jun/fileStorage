@@ -1,4 +1,6 @@
-.vsocde/
+.vscode/
 .idea/
 __pycache__/
 env/
+sqlite.db
+FileResource/
