@@ -12,4 +12,4 @@ app.include_router(v1.route, prefix="/v1", tags=["文件上传下载API"])
 
 
 if __name__ == "__main__":
-    uvicorn.run("app:app", debug=True, reload=True, workers=1)
+    uvicorn.run("app:app", host="0.0.0.0", port=8080,debug=True, reload=True, workers=1)
